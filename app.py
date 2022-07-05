@@ -11,8 +11,7 @@ def message():
        return render_template("kalkulator.html")
    elif request.method == "POST":
        pay = request.form["pay"]
-       lolek = 3.4
-       print(request.form, pay)
-       lolek2 = lolek / pay
-       print(f"{lolek2}")
+       waluta = request.form["Waluta"]
+       lolek = (int(float(pay))) / (int(float(waluta)))
+       print(request.form, lolek)
        return redirect("/bank")
